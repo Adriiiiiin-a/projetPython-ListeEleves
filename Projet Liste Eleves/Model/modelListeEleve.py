@@ -24,5 +24,12 @@ class modelListeEleve:
 
         f.close()
 
+        self.trierListeEleves()
+
         #print(self.listeEleves)
+
+
+    def trierListeEleves(self):
+
+        self.listeEleves.sort()
 
