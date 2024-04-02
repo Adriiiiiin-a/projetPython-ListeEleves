@@ -29,6 +29,8 @@ class vueListeEleves(QWidget):
         layout = QVBoxLayout()
         self.setLayout(layout)
 
+        self.boutonQuitter = QPushButton("Quitter", clicked=lambda: exit())
+
 
 
         self.addDataInList()
@@ -47,6 +49,7 @@ class vueListeEleves(QWidget):
         layout.addWidget(self.classSelec)
         layout.addWidget(self.idSelec)
         layout.addWidget(self.boutonAjouter)
+        layout.addWidget(self.boutonQuitter)
 
 
 

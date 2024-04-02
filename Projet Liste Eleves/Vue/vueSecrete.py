@@ -215,14 +215,16 @@ class vueSecrete(QWidget):
         self.secretLabel = QLabel()
         self.secretLabel2 = QLabel("Oh non, une vilaine erreur :(((((((")
 
+        self.boutonQuitter = QPushButton("Quitter", clicked=lambda:exit())
+
 
         self.secretButon = QPushButton("Cliquez ici pour retourner en arrière", clicked=lambda:self.secretFuction())
 
-        layout = QVBoxLayout()
-        self.setLayout(layout)
-        layout.addWidget(self.secretLabel2)
-        layout.addWidget(self.secretButon)
-        layout.addWidget(self.secretLabel)
+        self.layout = QVBoxLayout()
+        self.setLayout(self.layout)
+        self.layout.addWidget(self.secretLabel2)
+        self.layout.addWidget(self.secretButon)
+        self.layout.addWidget(self.secretLabel)
 
 
     def secretFuction(self):
@@ -251,6 +253,7 @@ class vueSecrete(QWidget):
         self.secretLabel.setMinimumSize(QtCore.QSize(200, 200))
         self.secretLabel.setMaximumSize(QtCore.QSize(400, 400))
         self.secretLabel.setObjectName("label")
+        self.layout.addWidget(self.boutonQuitter)
 
 
         self.secretLabel.setMovie(self.movie)
